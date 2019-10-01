@@ -1,0 +1,24 @@
+h1, p {
+ font-family: montserrat;
+}
+
+
+.result {
+font-family: montserrat;
+}
+
+
+
+body {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+
+
+.convertButton{
+    width: 200px;
+    height: 50px;
+}
