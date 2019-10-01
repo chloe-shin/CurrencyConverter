@@ -85,9 +85,7 @@
 let amount = document.getElementById("amountTextBox");
 let convertButton = document.getElementById("convertButton");
 let result = document.getElementById("result");
-
 convertButton.addEventListener("click", convert);
-
 
 function convert() {
   let fromCurrency = document.getElementById("fromCurrency").value;
@@ -95,7 +93,6 @@ function convert() {
   let money = amount.value;
   callApi(fromCurrency, toCurrency, money)
 }
-
 
 async function callApi(from, to, money) {
   let currency = from + '_' + to
@@ -105,15 +102,13 @@ async function callApi(from, to, money) {
   const exchangeRate = json[currency.toUpperCase()].val;
   let convertedValue = exchangeRate * money;
   console.log(convertedValue);
-  document.getElementById('result').innerHTML = 'Here you go, exchanged amount is ' + convertedValue.toFixed(2)
+  document.getElementById('result').innerHTML = 'Here you go, exchanged amount is ' + formatCurrency (to, convertedValue)
 }
-
-
 
 function formatCurrency(type, value) {
   const formatter = new Intl.NumberFormat(type, {
-    currency: value,
+    currency: type,
     style: "currency"
   });
-  return formatter.convert();
+  return formatter.format(value);
 }
