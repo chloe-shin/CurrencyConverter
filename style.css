@@ -5,9 +5,10 @@ h1, p {
 
 
 #result {
-font-family: 'Turret Road', cursive;
-font-weight: bold;
-color:white;
+font-family: montserrat;
+font-weight: bolder;
+color: #d6d6d6; 
+font-size: 28px;
 }
 
 
@@ -32,6 +33,7 @@ body {
 
 #convertButton {
     font-family: montserrat;
+    font-weight: bolder;
     background-color: #d4433f;
     color: white;
     height: 40px;
