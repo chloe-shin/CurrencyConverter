@@ -102,7 +102,8 @@ async function callApi(from, to, money) {
   const exchangeRate = json[currency.toUpperCase()].val;
   let convertedValue = exchangeRate * money;
   console.log(convertedValue);
-  document.getElementById('result').innerHTML = 'Here you go, exchanged amount is ' + formatCurrency (to, convertedValue)
+  document.getElementById('result').innerHTML = 'Here you go, exchanged amount is : ' + formatCurrency (to, convertedValue) 
+  
 }
 
 function formatCurrency(type, value) {
