@@ -56,3 +56,10 @@ body {
     width: 200px;
     color: white;
 }
+
+#finalMessage {
+    font-family: montserrat;
+    font-weight: bolder;
+    color: #d6d6d6; 
+    font-size: 20px;
+}
